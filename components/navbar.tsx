@@ -57,7 +57,7 @@ export function Navbar() {
             <NavLink onClick={() => navigateToSection("experience")}>Experience</NavLink>
             <NavLink onClick={() => navigateToSection("projects")}>Projects</NavLink>
             <NavLink onClick={() => navigateToSection("contact")}>Contact</NavLink>
-            <Link href="https://drive.google.com/file/d/1Wjjd0RZzKvbfzpDzj2lvW1m06huiY3D0/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <Link href="https://drive.google.com/file/d/19C_zyxE0S-eA-6n3KNWGz01PAccS8FbD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <Button className="ml-4 bg-black text-white font-bold py-2 px-4 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(77,126,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(77,126,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
                 Resume
               </Button>
