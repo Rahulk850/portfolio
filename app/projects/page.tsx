@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, Suspense } from "react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
@@ -10,7 +10,7 @@ import { ProjectCard } from "@/components/project-card"
 import { Navbar } from "@/components/navbar"
 import { AnimatedSection } from "@/components/animated-section"
 
-export default function ProjectsPage() {
+function ProjectsContent() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
@@ -120,14 +120,6 @@ export default function ProjectsPage() {
               />
             </AnimatedSection>
           ))}
-
-          
-
-        
-
-          
-
-         
         </div>
       </div>
 
@@ -139,5 +131,13 @@ export default function ProjectsPage() {
         </div>
       </footer>
     </div>
+  )
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsContent />
+    </Suspense>
   )
 }
